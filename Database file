@@ -1,0 +1,101 @@
+Create database semsproject;
+/c semsproject;
+
+----Faculty----------------------------------------------------------------------------
+
+
+Create table facultysignup(
+Adhar varchar(20) primary key,
+Name varchar(30),
+Phone Varchar(10),
+Address varchar (30),
+DoB varchar(40),
+Qualification varchar(30),
+password varchar(30),
+img bytea
+ );
+ 
+ 
+ Create table student_marks_update(
+deptt varchar(20),
+subject varchar(40),   ////========primary key kisko banaye not decided 
+Stream varchar(10),
+semester varchar(5),
+Reg.no varchar(20), 
+Name varchar(30),
+Asses_I varchar(3),
+Asses_II varchar(3),
+end_sem varchar(3),
+Total varchar(4),
+Grade varchar(2)
+ );
+
+
+
+
+
+create database sems_attendance;
+
+ Create table attendance_update(
+course_id varchar(20),		  ////========primary key kisko banaye not decided 
+Stream varchar(10),
+semester varchar(5),
+Date date,
+Reg.no varchar(20), 
+Name varchar(30),
+present varchar(3),
+Absent varchar(2)
+ );
+
+
+
+-----Student --------------------------------------------------------------------------------
+
+Create table studentsignup(
+Reg_no varchar(20) primary key,
+Name varchar(30),
+Stream varchar(10),
+DoB varchar(40),
+Phone Varchar(10),
+Address varchar (30),
+password varchar(30),
+img bytea
+ );
+
+
+----Inserting data in the table -----------------------------------
+
+insert into studentsignup values('2019272007','Dinesh Kumar','MCA','2020-11-03 +05:30','123456789','Chennai','2019272007');
+insert into studentsignup values('2019272008','Dhivagar','MCA','2020-11-03 +05:30','123456789','Chennai','2019272008');
+insert into studentsignup values('2019272009','Hari Vishwesh','MCA','2020-11-03 +05:30','123456789','Chennai','2019272009');
+insert into studentsignup values('2019272010','Hariharan','MCA','2020-11-03 +05:30','123456789','Chennai','2019272010');
+insert into studentsignup values('2019272011','Haritha','MCA','2020-11-03 +05:30','123456789','Chennai','2019272011');
+insert into studentsignup values('2019272013','Jayashree','MCA','2020-11-03 +05:30','123456789','Chennai','2019272013');
+insert into studentsignup values('2019272015','Karthickeyan','MCA','2020-11-03 +05:30','123456789','Chennai','2019272015');
+insert into studentsignup values('2019272016','Kokila','MCA','2020-11-03 +05:30','123456789','Chennai','2019272016');
+insert into studentsignup values('2019272017','Krishnapriya','MCA','2020-11-03 +05:30','123456789','Chennai','2019272017');
+insert into studentsignup values('2019272018','Krithiga','MCA','2020-11-03 +05:30','123456789','Chennai','2019272018');
+insert into studentsignup values('2019272020','Madhumitha','MCA','2020-11-03 +05:30','123456789','Chennai','2019272020');
+insert into studentsignup values('2019272021','Manikandan','MCA','2020-11-03 +05:30','123456789','Kanyakumari','2019272021');
+insert into studentsignup values('2019272022','Manjula','MCA','2020-11-03 +05:30','123456789','Chennai','2019272022');
+
+insert into studentsignup values('2019272023','Mathan Kumar','MCA','2020-11-03 +05:30','123456789','Pondicherry','2019272023');
+insert into studentsignup values('2019272024','MD Shabbir Alam','MCA','2020-11-03 +05:30','123456789','Patna','2019272024');
+insert into studentsignup values('2019272025','Mukesh Patel','MCA','2020-11-03 +05:30','123456789','Uttar Pradesh','2019272025');
+insert into studentsignup values('2019272026','Nallendran','MCA','2020-11-03 +05:30','123456789','Chennai','2019272026');
+insert into studentsignup values('2019272027','Noorul Ameen','MCA','2020-11-03 +05:30','123456789','Chennai','2019272027');
+insert into studentsignup values('2019272028','Parkavi','MCA','2020-11-03 +05:30','123456789','Chennai','2019272028');
+
+insert into studentsignup values('2019272030','Priyanka','MCA','2020-11-03 +05:30','123456789','Chennai','2019272030');
+insert into studentsignup values('2019272031','Raja','MCA','2020-11-03 +05:30','123456789','Chennai','2019272031');
+insert into studentsignup values('2019272032','Rashika','MCA','2020-11-03 +05:30','123456789','Chennai','2019272032');
+
+insert into studentsignup values('2019272034','Sandhiya','MCA','2020-11-03 +05:30','123456789','Chennai','2019272034');
+insert into studentsignup values('2019272035','Sateesh','MCA','2020-11-03 +05:30','123456789','Chennai','2019272035');
+insert into studentsignup values('2019272036','Shankar Narayanan','MCA','2020-11-03 +05:30','123456789','Chennai','2019272036');
+insert into studentsignup values('2019272037','Sri Lakshmi','MCA','2020-11-03 +05:30','123456789','Chennai','2019272037');
+insert into studentsignup values('2019272038','Surya R','MCA','2020-11-03 +05:30','123456789','Chennai','2019272038');
+insert into studentsignup values('2019272039','Surya S','MCA','2020-11-03 +05:30','123456789','Chennai','2019272039');
+insert into studentsignup values('2019272040','VIgneshwaran','MCA','2020-11-03 +05:30','123456789','Chennai','2019272040');
+insert into studentsignup values('2019272041','Vishal kumar Singh','MCA','2020-11-03 +05:30','123456789','Chennai','2019272041');
+insert into studentsignup values('2019272043','Yashika Lakshmi','MCA','2020-11-03 +05:30','123456789','Chennai','2019272043');

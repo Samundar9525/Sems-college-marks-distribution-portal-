@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Label layoutX="144.0" layoutY="34.0" text="Welcome  ">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="256.0" layoutY="36.0" text="Anonymus">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <VBox prefHeight="528.0" prefWidth="113.0" style="-fx-background-color: purple;">
+         <children>
+            <Button mnemonicParsing="false" onAction="#redirect_attendance" prefHeight="25.0" prefWidth="89.0" text="Attendance">
+               <VBox.margin>
+                  <Insets left="10.0" top="100.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Marks">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <Label layoutX="10.0" layoutY="10.0" prefHeight="44.0" prefWidth="103.0" text="S E M S" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="151.0" layoutY="94.0" text="Deptt.">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="494.0" layoutY="95.0" text="Branch">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="f_deptt_marks" layoutX="199.0" layoutY="91.0" prefHeight="25.0" prefWidth="164.0" />
+      <ChoiceBox fx:id="f_branch_marks" layoutX="551.0" layoutY="92.0" prefWidth="150.0" />
+      <Label layoutX="136.0" layoutY="134.0" text="Semester">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="f_semester_marks" layoutX="200.0" layoutY="131.0" prefHeight="25.0" prefWidth="164.0" />
+      <TableView fx:id="f_marks_table" layoutX="134.0" layoutY="199.0" prefHeight="246.0" prefWidth="644.0">
+        <columns>
+          <TableColumn fx:id="marks_regno" prefWidth="88.0" text="Reg.no" />
+          <TableColumn fx:id="marks_name" prefWidth="210.0" text="Name" />
+            <TableColumn fx:id="marks_asses_1" prefWidth="74.0" text="Asses I" />
+            <TableColumn fx:id="marks_asses_2" prefWidth="73.0" text="Asses II" />
+            <TableColumn fx:id="marks_endsem" prefWidth="72.0" text="End sem" />
+            <TableColumn fx:id="marks_total" prefWidth="77.0" text="Total" />
+            <TableColumn fx:id="marks_grade" prefWidth="47.0" text="Grade" />
+        </columns>
+      </TableView>
+      <Label layoutX="491.0" layoutY="134.0" text="Subject">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="f_subject_marks" layoutX="551.0" layoutY="131.0" onMousePressed="#loadsubject" prefWidth="150.0" />
+      <Button fx:id="update_marks" layoutX="313.0" layoutY="455.0" mnemonicParsing="false" onAction="#update_marks" prefHeight="25.0" prefWidth="339.0" style="-fx-background-color: darkgreen;" text="Update All the Data Of Student" textFill="WHITE" />
+
+      <Button layoutX="682.0" layoutY="455.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="97.0" style="-fx-background-color: darkred;" text="Reset" textFill="#fff8f8" />
+      <Button layoutX="134.0" layoutY="168.0" mnemonicParsing="false" onAction="#create_marks_sheet" prefHeight="25.0" prefWidth="230.0" style="-fx-background-color: #0095ff;" text="Create Marks Sheet" />
+      <Label fx:id="warning3" layoutX="374.0" layoutY="168.0" textFill="RED">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="163.0" layoutY="456.0" mnemonicParsing="false" onAction="#print_result" prefHeight="25.0" prefWidth="43.0" style="-fx-background-color: darkblue;" text="Print" textFill="#fffefe" />
+      <ImageView fitHeight="28.0" fitWidth="44.0" layoutX="130.0" layoutY="454.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/print%20icon.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="113.0" prefHeight="27.0" prefWidth="686.0" style="-fx-background-color: black;" text="                                                      Marks " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="111.0" layoutY="501.0" prefHeight="27.0" prefWidth="693.0" style="-fx-background-color: black;" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

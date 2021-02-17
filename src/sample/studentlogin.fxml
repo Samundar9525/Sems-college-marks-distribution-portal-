@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="student_portal" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <TabPane layoutX="100.0" layoutY="47.0" prefHeight="316.0" prefWidth="454.0" style="-fx-background-color: powderblue;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="login ">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="165.0" layoutY="87.0" text="Reg.no">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="login_regno" layoutX="222.0" layoutY="84.0" />
+                        <PasswordField fx:id="login_password" layoutX="222.0" layoutY="120.0" />
+                        <Label layoutX="151.0" layoutY="123.0" text="Password">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="108.0" fitWidth="113.0" layoutX="23.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/avatar.png" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="258.0" layoutY="160.0" mnemonicParsing="false" onAction="#stud_login" prefHeight="25.0" prefWidth="61.0" style="-fx-background-color: darkgreen;" text="login" textFill="WHITE" />
+                        <Label fx:id="testing" layoutX="226.0" layoutY="197.0" prefHeight="35.0" prefWidth="154.0" textFill="#ff0202">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Sign up">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="287.0" prefWidth="463.0">
+                     <children>
+                        <Label layoutX="37.0" layoutY="22.0" text="Reg.no">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="42.0" layoutY="52.0" text="Name">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="37.0" layoutY="85.0" text="Stream">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="43.0" layoutY="116.0" text="D.O.B">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="31.0" layoutY="176.0" text="Address">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="39.0" layoutY="146.0" text="Phone">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="student_regno" layoutX="89.0" layoutY="16.0" />
+                        <TextField fx:id="student_name" layoutX="90.0" layoutY="49.0" />
+                        <TextField fx:id="student_stream" layoutX="90.0" layoutY="82.0" />
+                        <TextField fx:id="student_phone" layoutX="90.0" layoutY="142.0" />
+                        <TextField fx:id="student_address" layoutX="90.0" layoutY="172.0" />
+                        <DatePicker fx:id="student_dob" layoutX="89.0" layoutY="112.0" prefHeight="25.0" prefWidth="150.0" />
+                        <Button layoutX="122.0" layoutY="241.0" mnemonicParsing="false" onAction="#student_register" prefHeight="25.0" prefWidth="115.0" style="-fx-background-color: darkgreen;" text="Register" textFill="WHITE" />
+                        <ImageView fx:id="student_image" fitHeight="171.0" fitWidth="176.0" layoutX="282.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/default%20image.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="282.0" layoutY="185.0" mnemonicParsing="false" onAction="#image_chooser" prefHeight="25.0" prefWidth="128.0" text="chose img.." />
+                        <Label layoutX="22.0" layoutY="206.0" text="Password">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="student_password" layoutX="89.0" layoutY="202.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Label layoutX="100.0" layoutY="2.0" text="Student Portal">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

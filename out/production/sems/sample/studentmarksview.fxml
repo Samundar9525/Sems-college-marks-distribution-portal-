@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <AnchorPane fx:id="marsk_portal" prefHeight="500.0" prefWidth="800.0">
+         <children>
+            <TableView fx:id="s_marks_table2" layoutX="134.0" layoutY="163.0" prefHeight="256.0" prefWidth="642.0">
+               <columns>
+                  <TableColumn fx:id="m_serial" prefWidth="39.0" text="S.no" />
+                  <TableColumn fx:id="smarks_name" prefWidth="259.0" text="Subject Name" />
+                  <TableColumn fx:id="smarks_asses_1" prefWidth="74.0" text="Asses I" />
+                  <TableColumn fx:id="smarks_asses_2" prefWidth="73.0" text="Asses II" />
+                  <TableColumn fx:id="smarks_endsem" prefWidth="72.0" text="End sem" />
+                  <TableColumn fx:id="smarks_total" prefWidth="77.0" text="Total" />
+                  <TableColumn fx:id="smarks_grade" prefWidth="47.0" text="Grade" />
+               </columns>
+            </TableView>
+            <Label layoutX="144.0" layoutY="18.0" text="Welcome  ">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="s_name_falg" layoutX="256.0" layoutY="20.0" text="Anonymus">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <VBox prefHeight="508.0" prefWidth="113.0" style="-fx-background-color: teal;">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Marks">
+                     <VBox.margin>
+                        <Insets left="10.0" top="100.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <Label layoutX="10.0" layoutY="10.0" prefHeight="44.0" prefWidth="103.0" text="S E M S" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="144.0" layoutY="97.0" text="Stream">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="491.0" layoutY="97.0" text="Semester">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="s_marks_semester" layoutX="555.0" layoutY="94.0" prefWidth="150.0" />
+            <Button layoutX="677.0" layoutY="431.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" style="-fx-background-color: darkred;" text="Close" textFill="#fff8f8">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Label layoutX="139.0" layoutY="437.0" text="C.G.P.A :">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Text fx:id="cgpa_cal" layoutX="219.0" layoutY="457.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0.00">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <Label layoutX="143.0" layoutY="69.0" text="Reg.no">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="s_marks_reg" layoutX="202.0" layoutY="66.0" onMousePressed="#s_marks_fetchreg" promptText="Enter reg.no.." />
+            <TextField fx:id="s_marks_stream" layoutX="202.0" layoutY="94.0" />
+            <Button layoutX="132.0" layoutY="132.0" mnemonicParsing="false" onAction="#Show_result" prefHeight="25.0" prefWidth="642.0" style="-fx-background-color: darkgreen;" text="Click here to Show the Result.." textFill="WHITE" />
+            <Button layoutX="559.0" layoutY="430.0" mnemonicParsing="false" onAction="#print_marks" prefHeight="35.0" prefWidth="97.0" style="-fx-background-color: darkblue;" text="      Print" textFill="#fffefe">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="28.0" fitWidth="44.0" layoutX="566.0" layoutY="433.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/print%20icon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

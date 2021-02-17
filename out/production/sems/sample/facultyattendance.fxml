@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="805.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Label layoutX="134.0" layoutY="30.0" text="Welcome  ">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="246.0" layoutY="32.0" text="Anonymus">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <VBox prefHeight="508.0" prefWidth="113.0" style="-fx-background-color: purple;">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Attendance">
+               <VBox.margin>
+                  <Insets left="10.0" top="100.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#redirect_marks" prefHeight="25.0" prefWidth="89.0" text="Marks">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <Label layoutX="10.0" layoutY="10.0" prefHeight="44.0" prefWidth="103.0" text="S E M S" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="483.0" layoutY="95.0" text="Course id">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="134.0" layoutY="95.0" text="Semester">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="157.0" layoutY="134.0" text="Date">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TableView fx:id="attendance_table" layoutX="136.0" layoutY="205.0" prefHeight="200.0" prefWidth="642.0">
+         <columns>
+            <TableColumn fx:id="f_table_regno" prefWidth="88.0" text="Reg.no" />
+            <TableColumn fx:id="f_table_name" prefWidth="307.0" text="Name" />
+            <TableColumn fx:id="f_table_present" minWidth="0.0" prefWidth="113.0" text="Present" />
+            <TableColumn fx:id="f_table_absent" prefWidth="133.0" text="Absent" />
+         </columns>
+      </TableView>
+      <Button layoutX="313.0" layoutY="415.0" mnemonicParsing="false" onAction="#update_attendance" prefHeight="25.0" prefWidth="339.0" style="-fx-background-color: darkgreen;" text="Update All the Data Of Student" textFill="WHITE" />
+      <Button layoutX="682.0" layoutY="415.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="97.0" style="-fx-background-color: darkred;" text="Reset" textFill="#fff8f8" />
+      <Label layoutX="113.0" prefHeight="27.0" prefWidth="678.0" style="-fx-background-color: black;" text="                                                      Attendance " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="attendance_date" layoutX="197.0" layoutY="131.0" prefHeight="25.0" prefWidth="158.0" />
+      <ComboBox fx:id="semester_list" layoutX="198.0" layoutY="93.0" prefWidth="150.0" />
+      <ComboBox fx:id="course_list" layoutX="553.0" layoutY="92.0" onMousePressed="#select_course" prefWidth="150.0" />
+      <Button layoutX="135.0" layoutY="173.0" mnemonicParsing="false" onAction="#create_attendance_sheet" prefHeight="25.0" prefWidth="230.0" style="-fx-background-color: #0095ff;" text="Create Attendance Sheet" />
+      <Button layoutX="546.0" layoutY="173.0" mnemonicParsing="false" onAction="#fetch_attendance_sheet" prefHeight="25.0" prefWidth="222.0" style="-fx-background-color: darkgreen;" text="Fetch Attendance Sheet" textFill="WHITE" />
+      <Label fx:id="warning2" layoutX="378.0" layoutY="173.0" textFill="#f80202">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="113.0" layoutY="481.0" prefHeight="27.0" prefWidth="692.0" style="-fx-background-color: black;" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
