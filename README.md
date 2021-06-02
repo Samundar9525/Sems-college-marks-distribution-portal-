@@ -9,5 +9,5 @@
 7.  At last i want to say that the setup is quite tedious so be patient and read the docs carefully.
 
 
-ide used       : intellij
+ide used       : intellij  | 
 database used  : postgres
